@@ -6,7 +6,8 @@ error_reporting(E_ALL) ;
 
 require_once '../vendor/autoload.php';
 
-use Log\Logger;
+use Valerjan\Logger;
 use Psr\Log\LogLevel;
 
-Logger::log(LogLevel::NOTICE,'Test log');
+$loger = new Logger('../src/log.txt');
+$loger->log(LogLevel::NOTICE,'Test log');

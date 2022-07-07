@@ -6,13 +6,11 @@
     "homepage": "https://github.com/valerka-php/package",
     "autoload": {
         "psr-4": {
-            "Log\\": "src/"
+            "Valerjan\\": "src/"
 
         }
     },
     "require": {
-        "php": ">=8.1",
-        "squizlabs/php_codesniffer": "^3.7",
-        "friendsofphp/php-cs-fixer": "^3.8"
+        "php": ">=8.1"
     }
 }
