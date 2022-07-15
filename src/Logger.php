@@ -2,19 +2,25 @@
 
 namespace Valerjan;
 
-use Psr\Log\AbstractLogger;
+use Valerjan\log\AbstractLogger;
 
 class Logger extends AbstractLogger
 {
-    public string $path = '';
+    private static string $path = '../src/logs/';
 
-    public function __construct($path){
-        $this->path = $path;
-    }
+    public static function log(
+        $level,
+        string|\Stringable $message,
+        string $line ,
+        string $file ,
+        string $storage = 'log.txt',
+        array $context = []
+    ): void
 
-    public function log($level, string|\Stringable $message, array $context = []): void
     {
-        $data = date('H:m:s ') . 'Logger.php/' . $level . '/' . $message  . "\r";
-        file_put_contents($this->path, $data, FILE_APPEND);
+        self::$path .= $storage;
+        $data = date('H:m:s ') . ' | ' . $level . ' | '. $file . ' | line : ' . $line . ' | ' . $message . "\r\n";
+        file_put_contents(self::$path, $data, FILE_APPEND);
+
     }
 }
