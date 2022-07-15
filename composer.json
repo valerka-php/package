@@ -1,5 +1,5 @@
 {
-    "name": "valerjan/Logger",
+    "name": "valerjan/logger",
     "type": "library",
     "description": "The best logger ever",
     "keywords": ["log","logging"],
