@@ -1,5 +1,5 @@
 {
-    "name": "valerjan/nix-practice",
+    "name": "valerjan/Logger",
     "type": "library",
     "description": "The best logger ever",
     "keywords": ["log","logging"],
